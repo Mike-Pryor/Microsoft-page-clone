@@ -1,4 +1,4 @@
 # Microsoft-page-clone
 Html, css and a little js.
 - Original code is from Brad Traversy's tutorial.
--- This is only a landing page. Links are not working.
+- Only a sample landing page, the links do not work.
