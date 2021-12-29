@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #262626; /* color of the links */
+    text-decoration: none; /* gets rid of the underlined text */
+  }
+  
+  ul {
+    list-style: none; /* gets rid of the bullets */
+  }
+
+  .container { /* wraps around everything */
+    width: 90%; /* takes up 90% of screen */
+    max-width: 1100px; /* the size will not go beyond 1100px */
+    margin: auto; /* gives an even margin on all sides (centered) */
+  }
+
+  /* Nav */
+.main-nav { /* their are 3 parts of this Navigation bar */
+    display: flex; /* lines internal items into rows */
+    align-items: center;
+    justify-content: space-between; /* puts space between items */
+    height: 60px;
+    padding: 20px 0; /* 20px top & bottom, 0px on right & left */
+    font-size: 13px;
+  }
+
+  .main-nav .logo {
+    width: 110px; /* makes logo smaller (or larger) */
+  }
+  
+  .main-nav ul {
+    display: flex; /* makes the Nav's unordered list become a row (not vertical) */
+  }
+  
+  .main-nav ul li {
+    padding: 0 10px; /* 0px top & bottom, 10px on right & left */
+  }
+  
+  .main-nav ul li a {
+    padding-bottom: 2px; /* pushes the underline "line" down slightly */
+  }
+  
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+  }
+  
+  .main-nav ul.main-menu {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+/* hamburger menu button */
+  .menu-btn {
+    cursor: pointer;
+    position: absolute; /* will always show in the top left corner */
+    top: 20px;
+    right: 30px; /* moves it to the right side */
+    z-index: 2; /* makes it always show on top */
+    display: none;  /* so it will not show on larger screens */
+  }
+  
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626; /* Black button with white text */
+    color: #fff;
+    font-size: 15px;;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .dark { /* for the Carbon section text */ 
+    color: #fff;
+  }
+  
+  .dark .btn { /* for the Carbon section button */
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Showcase */
+  .showcase {
+    width: 100%; /* so it fills the entire container */
+    height: 400px;
+    background: url('https://i.ibb.co/zGSDGCL/slide1.png') no-repeat center center/cover; /* added background properties */
+    display: flex;
+    flex-direction: column; /* this makes the items display vertically */
+    align-items: center; /* centers items in the container */
+    text-align: center; /* centers the text in the container */
+    justify-content: flex-end; /* this will push items to the container's bottom */
+    padding-bottom: 50px; /* pushes items away from the container's edge */
+    margin-bottom: 20px;
+  }
+  
+  .showcase h2, .showcase p {
+    margin-bottom: 10px; /* puts space btw the text and button */
+  }
+  
+  .showcase .btn {
+    margin-top: 20px; /* puts space on the top of the "Shop Now" button */
+  }
+  
+  /* Home cards - there are 4 cards */
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* fr = fractional, repeat 4 times at 1 fraction of a column */
+    grid-gap: 20px; /* puts space between the 4 home cards, the showcase also has 20px margin */
+    margin-bottom: 40px; /* adds space above the "Xbox" section */
+  }
+  
+  .home-cards img { /* without this, the images will go outside of their container */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .home-cards h3 {
+    margin-bottom: 5px;
+  }
+  
+  .home-cards a { /* for the links in the home cards */
+    display: inline-block;
+    padding-top: 10px;
+    color: #0067b8; /* link's color */
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Pushes the font awesome icon out a little when hovering. this is for the chevron/arrow-pointing-right */
+  .home-cards a:hover i { 
+    margin-left: 10px;
+  }
+  
+  /* Xbox */
+  .xbox {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px; /* puts space under the container, above Home cards 2 */
+  }
+  
+  .xbox .content {
+    width: 40%;
+    padding: 50px 0 0 30px; /* top,bottom,right,left */
+  }
+  
+  .xbox p, .carbon p { /* for both Xbox & Carbon sections */
+    margin: 10px 0 20px; /* space between the paragraph text */
+  }
+  
+  /* Carbon section, same size as the Xbox section */
+  .carbon {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
+  }
+  
+  .carbon .content {
+    width: 55%;
+    padding: 100px 0 0 30px; /* top=100,bottom=0,right=0,left=30 */
+  }
+  
+  /* Follow, social media links */
+  .follow {
+    display: flex; /* puts into a row */
+    align-items: center;
+    justify-content: flex-start; /* makes sure it is aligned at the beginning */
+    margin: 30px 0 30px;
+  }
+  
+  .follow * { /* spacing for the social media items */
+    margin-right: 10px;
+  }
+  
+  /* Links - just above the footer */
+  .links {
+    background: #f2f2f2; /* light gray background */
+    color: #616161; /* darker text */
+    font-size: 12px;
+    padding: 35px 0;
+  }
+  
+  .links-inner { /* similar to the 'footer-inner' */
+    max-width: 1100px; /* same as the container above */
+    margin: 0 auto; /* aligns in the middle */
+    padding: 0 20px; /* 20px on the left & right */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* fr = fractional, repeat 6 times at 1 fraction of a column */
+    grid-gap: 10px;
+    align-items: flex-start; /* pushes them to the left side */
+    justify-content: center;
+  }
+  
+  .links li {
+    line-height: 2.8; /* puts space between the links */
+  }
+  
+  /* Footer */
+  .footer {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0; /* top & bottom is 20px, 0 on left and right  */
+  }
+  
+  .footer-inner {  /* matching to the links-inner */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    display: flex;  /* list items will display in a row */
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer div i {
+    margin-right: 10px; /* pushes the globe icon to the right */
+  }
+  
+  .footer ul {  /* unorganized list = the words */
+    display: flex;
+    flex-wrap: wrap;  /* so words stay together */
+  }
+  
+  .footer li {  /* adds space between the words */
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  
+   /* 2 Media queries: one for 700px and below, and one for 500px and below */
+  @media(max-width: 700px) {
+    .menu-btn {
+      display: block;  /* will make the button show at 700px or less */
+    }
+  
+    .menu-btn:hover {
+      opacity: 0.5;
+    }
+  
+    .main-nav ul.right-menu {
+      margin-right: 50px; /* so icons do not overlap */
+    }
+  
+    .main-nav ul.main-menu {  /* the popup menu*/
+      display: block;
+      position: absolute; /* takes it out of the relative flow */
+      top:0;
+      left: 0;
+      background: #f2f2f2;
+      width: 50%;
+      height: 100%;
+      border-right: #ccc 1px solid;
+      opacity: 0.9;
+      padding: 30px;
+      transform: translateX(-500px); /* pushes it off the screen at the start */
+      transition: transform 0.5s ease-in-out; /* gives the popup menu a sliding effect */
+    }
+  
+    .main-nav ul.main-menu li { /* makes popup menu links look better */
+      padding: 10px;
+      border-bottom: #ccc solid 1px;
+      font-size: 14px;
+    }
+  
+    .main-nav ul.main-menu li:last-child {
+      border-bottom: 0; /* gets rid of the border on the last item */
+    }
+  
+    .main-nav ul.main-menu.show {
+      transform: translateX(-20px); /* Opposite of -500 state, shows popup menu. The Javascript (in the html file) is using the 'show' class to display the menu when clicked */
+    }
+  
+    .home-cards {
+      grid-template-columns: repeat(2, 1fr); /* was 4,1fr in 700px & larger */
+    }
+  
+    .xbox .content p {
+      display: none; /* hides the paragraph text */
+    }
+  
+    .xbox .content h2 {
+      margin-bottom: 20px; /* adds space between subtitle and btn */
+    }
+  
+    .carbon .content {
+      width: 85%; /* changes from 55% on larger screens */
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(2, 1fr); /* was 6,1fr in 700px & larger screens */
+    }
+  }
+  
+  @media(max-width: 500px) {
+    .home-cards {
+      grid-template-columns: 1fr; /* no 'repeat' needed because only using 1 fractional unit */
+    }
+  
+    .links .links-inner {
+      grid-template-columns: 1fr;
+    }
+  
+    .links .links-inner ul {
+      margin-bottom: 20px;/* puts space between the links*/
+    }
+  }
